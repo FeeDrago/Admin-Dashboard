@@ -1,5 +1,9 @@
 /* General */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+body {
+    font: Roboto, sans-serif;
+}
 
 .page {
     display: grid;
@@ -14,26 +18,30 @@
     grid-row: 1 / 2;
     display: grid;
     grid-template-rows: 30% 70%;
+    row-gap: 10px;;
 }
 
 .header-utils {
     grid-row: 1 / 2 ;
-    height: 50%;
-    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 form {
-    flex: 1;
+    flex: 1.5;
     grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .header-utils > div {
     display: flex;
     flex: 1;
-    justify-content: space-evenly;
+    gap: 30px;
+    justify-content: center;
     align-items: center;
 }
 
@@ -49,10 +57,36 @@ form input[type="search"] {
 .welcome-bar{
     grid-row: 2 / 3;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .post-buttons {
+    flex: 1;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.post-buttons > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome-bar div {
+    flex: 1;
+}
+
+.welcome-bar > div:first-of-type {
+    flex: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    justify-content: center;
 }
 
 form button, #notifications, #profile-button {
@@ -66,20 +100,32 @@ form button, #notifications, #profile-button {
     cursor: pointer;
 }
 
+#dashboard-icon {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 .header h2 {
     margin: 0px;
 }
 
 form button {   
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/735px-Magnifying_glass_icon.svg.png");
+    background-image: url("icons/search-icon.svg");
+    
 }
 
 #notifications {
-    background-image: url('https://www.svgrepo.com/show/489066/notifications-active.svg');
+    background-image: url('icons/notifications-icon.svg');
 }
 
 #profile-button {
-    background-image: url('https://www.svgrepo.com/show/343494/profile-user-account.svg');
+    background-image: url('icons/profile-icon.svg');
 }
 
 .welcome-bar img {
@@ -87,11 +133,31 @@ form button {
     height: 50px;
 }
 
-.post-buttons li {
+.welcome-bar > div > div {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.welcome-bar h3 {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}   
+
+.welcome-bar h2 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}   
+
+
+.post-buttons > ul > li {
     list-style: none;
 
 }
-.post-buttons li button {
+.post-buttons ul li button {
     color: white;
     background-color: blue;
     border: none;
@@ -113,3 +179,4 @@ form button {
     grid-row: 2 / 3;
     background-color: tomato;
 }
+
