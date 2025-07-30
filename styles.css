@@ -81,12 +81,12 @@ form input[type="search"] {
 }
 
 .welcome-bar > div:first-of-type {
-    flex: 1;
+    flex: 1.5;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 3fr;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
 form button, #notifications, #profile-button {
@@ -137,8 +137,9 @@ form button {
     grid-row: 1 / 3;
     grid-column: 1 / 2;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    padding-left: 20px;
 }
 
 
